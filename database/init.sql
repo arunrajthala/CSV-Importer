@@ -1,7 +1,7 @@
 -- sql file to create database and table
 
-CREATE DATABASE `mindarc_assessment`;
-use `mindarc_assessment`;
+CREATE DATABASE `product`;
+use `product`;
 
 CREATE TABLE `original_data` (
 	product_id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
