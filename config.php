@@ -6,8 +6,9 @@
 $servername = "127.0.0.1";
 $username 	= "root";
 $password 	= "sarita123";
-$charset = 'utf8mb4';
-$dsn        = "mysql:host=$host;charset=$charset";
+$charset 	= 'utf8mb4';
+$dbname		= "mindarc_assessment";
+$dsn        = "mysql:host=$host;dbname=$dbname;";
 $options    = array(
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
             );
