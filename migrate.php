@@ -10,10 +10,9 @@ require "config.php";
 try {
 	// insert into database
 	$connection = new PDO($dsn, $username, $password, $options);
-	$sql = 'UPDATE migrated_data
-	  JOIN original_data
-	    ON (original_data.product_code, original_data.product_label) = (migrated_data.sku, migrated_data.name)
-	   SET migrated_data.product_id = original_data.product_id
+	$sql = 'INSERT INTO migrated_data (sku, `name` ) 
+	SELECT concat(IF(gender="m","men_","women_"),product_code), product_label from original_data;
+
 	';
 
 	$statement = $connection->prepare($sql);
